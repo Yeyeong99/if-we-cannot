@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "국립박물관문화재단클래식B";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MaruBuri-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  background-image: url(./img/우리가-빛의-속도로-갈-수-없다면_0000s_0006_레이어-24.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150vh;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+span {
+  font-family: "MaruBuri-Regular";
+}
+
+.author-container {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 10%;
+}
+.moon {
+  z-index: 1;
+  filter: drop-shadow(3px 3px 3px #000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: black;
+}
+
+.moon-img :hover {
+  cursor: pointer;
+  padding-left: 10px;
+  transition: all 0.2s;
+  z-index: 1;
+}
+
+.author {
+  display: block;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.show {
+  height: 1rem;
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -60px;
+  }
+
+  to {
+    margin-left: 0px;
+  }
+}
+
+.out {
+  animation-duration: 1s;
+  animation-name: slideout;
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 0px;
+  }
+
+  to {
+    margin-left: -60px;
+  }
+}
+.cloud {
+  position: absolute;
+  top: 20vh;
+  width: 479px;
+  height: 60px;
+  background-image: url(./img/구름.png);
+}
+
+.cloud-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  mask: url(./img/구름마스크.png);
+  -webkit-mask: url(./img/구름마스크.png);
+  -webkit-mask-size: 110%;
+  mask-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cloud-over {
+  position: absolute;
+  top: -13vh;
+  width: 100%;
+  height: 937px;
+  background-image: url(./img/구름전경.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ground {
+  position: absolute;
+  bottom: -50vh;
+  width: 100%;
+  height: 90%;
+  background-image: url(./img/바닥.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  position: fixed;
+  top: 35vh;
+  text-align: center;
+  font-family: "국립박물관문화재단클래식B";
+  font-size: 45px;
+  width: 100%;
+  text-align: center;
+  filter: blur(0.3px);
+  background: -webkit-linear-gradient(
+    -45deg,
+    #7d3c94 30%,
+    #0792d9,
+    #b01062 70%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bottom {
+  filter: blur(3px) contrast(200%);
+}
+
+a {
+  position: absolute;
+  right: 45%;
+  bottom: -100px;
+  text-decoration: none;
+  font-family: "국립박물관문화재단클래식B";
+  color: white;
+  font-size: 30px;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+
+li {
+  list-style: none;
+}
+
+footer {
+  font-family: "MaruBuri-Regular";
+  color: #2f3b5d;
+  position: absolute;
+  top: 145vh;
+  left: 43%;
+}
