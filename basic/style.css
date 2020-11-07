@@ -82,9 +82,9 @@ span {
 }
 
 .cloud-mask {
-  position: fixed;
+  position: absolute;
   width: 100%;
-  height: 90%;
+  height: 100%;
   mask: url(/img/구름마스크.png);
   -webkit-mask: url(/img/구름마스크.png);
   -webkit-mask-size: 100%;
@@ -161,7 +161,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+/* 
 @media {
   body {
     height: 170vh;
@@ -193,4 +193,4 @@ footer {
     left: 70%;
     width: 100%;
   }
-}
+} */
