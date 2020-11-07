@@ -23,7 +23,7 @@
 }
 
 html {
-  background-image: url(./img/우리가-빛의-속도로-갈-수-없다면_0000s_0006_레이어-24.png);
+  background-image: url(/img/우리가-빛의-속도로-갈-수-없다면_0000s_0006_레이어-24.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 150vh;
@@ -62,56 +62,32 @@ span {
 
 .author {
   display: block;
-  height: 0px;
+  width: 0px;
   overflow: hidden;
   transition: 0.2s;
 }
 
 .show {
-  height: 1rem;
-  animation-duration: 1s;
-  animation-name: slidein;
+  width: 200px;
+  overflow: hidden;
+  transition: 0.2s;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: -60px;
-  }
-
-  to {
-    margin-left: 0px;
-  }
-}
-
-.out {
-  animation-duration: 1s;
-  animation-name: slideout;
-}
-
-@keyframes slideout {
-  from {
-    margin-left: 0px;
-  }
-
-  to {
-    margin-left: -60px;
-  }
-}
 .cloud {
   position: absolute;
-  top: 20vh;
+  top: 20%;
   width: 479px;
   height: 60px;
-  background-image: url(./img/구름.png);
+  background-image: url(/img/구름.png);
 }
 
 .cloud-mask {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100%;
-  mask: url(./img/구름마스크.png);
-  -webkit-mask: url(./img/구름마스크.png);
-  -webkit-mask-size: 110%;
+  height: 90%;
+  mask: url(/img/구름마스크.png);
+  -webkit-mask: url(/img/구름마스크.png);
+  -webkit-mask-size: 100%;
   mask-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -119,28 +95,29 @@ span {
 
 .cloud-over {
   position: absolute;
-  top: -13vh;
+  top: -13%;
   width: 100%;
   height: 937px;
-  background-image: url(./img/구름전경.png);
+  background-image: url(/img/구름전경.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .ground {
   position: absolute;
-  bottom: -50vh;
+  bottom: -50%;
   width: 100%;
   height: 90%;
-  background-image: url(./img/바닥.png);
+  background-image: url(/img/바닥.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .title {
   position: fixed;
-  top: 35vh;
-  text-align: center;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: "국립박물관문화재단클래식B";
   font-size: 45px;
   width: 100%;
@@ -162,8 +139,9 @@ span {
 
 a {
   position: absolute;
-  right: 45%;
-  bottom: -100px;
+  left: 50%;
+  bottom: -10%;
+  transform: translate(-50%, -50%);
   text-decoration: none;
   font-family: "국립박물관문화재단클래식B";
   color: white;
@@ -179,6 +157,40 @@ footer {
   font-family: "MaruBuri-Regular";
   color: #2f3b5d;
   position: absolute;
-  top: 145vh;
-  left: 43%;
+  top: 145%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media {
+  body {
+    height: 170vh;
+  }
+  .title {
+    transform: translate(-50%, -50%);
+    left: 37%;
+    top: 30%;
+    font-size: 20px;
+  }
+  .cloud-mask {
+    width: 100%;
+    height: 100%;
+  }
+  .cloud-over {
+    width: 150%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 60%;
+  }
+  .ground {
+    height: 110%;
+    transform: translate(-50%, -50%);
+    top: 117%;
+    left: 50%;
+  }
+  footer {
+    transform: translate(-50%, -50%);
+    left: 70%;
+    width: 100%;
+  }
 }
