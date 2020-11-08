@@ -145,7 +145,7 @@ span {
 .cloud-over {
   top: 100px;
   width: 100%;
-  height: 937px;
+  height: 100%;
 }
 
 .cloud-over.show {
