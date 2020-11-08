@@ -26,7 +26,7 @@ html {
   background-image: url(/img/우리가-빛의-속도로-갈-수-없다면_0000s_0006_레이어-24.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 150vh;
+  height: 140vh;
 }
 
 body {
@@ -37,7 +37,41 @@ body {
 span {
   font-family: "MaruBuri-Regular";
 }
+.line-container {
+  position: absolute;
+  top: -100%;
+  right: -5%;
+  transform: rotate(-45deg);
+  transition: all 1s;
+}
 
+.line-container.show {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  transform: rotate(-45deg);
+  transition: all 0.8s;
+}
+
+.line {
+  margin-bottom: 10px;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(45deg, #7d3c94, #0792d9, #b01062);
+}
+
+.line:nth-child(2) {
+  margin-left: 10px;
+}
+.line:nth-child(3) {
+  margin-left: -10px;
+}
+.line:nth-child(4) {
+  margin-left: 30px;
+}
+.line:nth-child(5) {
+  margin-left: 20px;
+}
 .author-container {
   display: flex;
   position: absolute;
@@ -45,7 +79,8 @@ span {
   top: 20%;
   left: 10%;
 }
-.moon {
+
+.moon.show {
   z-index: 1;
   filter: drop-shadow(3px 3px 3px #000);
   background-repeat: no-repeat;
@@ -53,7 +88,7 @@ span {
   box-shadow: black;
 }
 
-.moon-img :hover {
+.moon :hover {
   cursor: pointer;
   padding-left: 10px;
   transition: all 0.2s;
@@ -62,38 +97,40 @@ span {
 
 .author {
   display: block;
-  width: 0px;
-  overflow: hidden;
+  opacity: 0;
   transition: 0.2s;
 }
 
 .show {
   width: 200px;
-  overflow: hidden;
+  opacity: 100%;
   transition: 0.2s;
 }
 
 .cloud {
+  top: 20%;
+  left: -479px;
+  transition: all 0.8s;
+}
+
+.cloud.show {
   position: absolute;
   top: 20%;
+  left: 0px;
   width: 479px;
   height: 60px;
   background-image: url(/img/구름.png);
-}
-
-.cloud-mask {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  mask: url(/img/구름마스크.png);
-  -webkit-mask: url(/img/구름마스크.png);
-  -webkit-mask-size: 100%;
-  mask-size: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
+  transition: all 1s;
 }
 
 .cloud-over {
+  top: 100px;
+  width: 100%;
+  height: 937px;
+}
+
+.cloud-over.show {
+  transition: all 1s;
   position: absolute;
   top: -13%;
   width: 100%;
@@ -111,6 +148,14 @@ span {
   background-image: url(/img/바닥.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.title-container {
+  opacity: 0%;
+}
+.title-container.show {
+  transition: all 5s;
+  opacity: 100%;
 }
 
 .title {
