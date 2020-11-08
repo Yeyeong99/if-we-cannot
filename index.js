@@ -16,7 +16,10 @@ moon.addEventListener("click", function() {
 });
 
 window.addEventListener("click", function(){
+    clickBtn.classList.add("hide");
     for (i=0;i<=array.length;i++) {
-        array[i].classList.add("show")
+        console.log(array[i])
+        array[i].classList.add("show");
     }
+    clickBtn.classList.remove("click");
 });
