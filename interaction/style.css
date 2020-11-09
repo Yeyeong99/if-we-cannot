@@ -20,16 +20,30 @@ body {
   animation: change-width 1s;
 }
 
-.width {
-  width: 0px;
+#width {
+  transition: 2s;
+  width: 1px;
 }
 @keyframes change-width {
   0% {
-    transform: rotate(300deg) translate(50%, 50%);
+    transform-origin: top left;
+    transform: rotate(230deg) translate(0, 0);
   }
 
+  50% {
+    width: 10px;
+  }
   100% {
-    transform: rotate(300deg) translate(50%, 50%);
-    width: 0px;
+    transform-origin: top left;
+    transform: rotate(220deg) translate(-50px, -50px);
   }
 }
+
+/* @keyframes change-location {
+  0% {
+    transform: ;
+  }
+  100% {
+    transform: ;
+  }
+} */
