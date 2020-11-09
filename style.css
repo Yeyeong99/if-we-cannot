@@ -18,7 +18,6 @@
 ::after,
 ::before {
   box-sizing: border-box;
-  margin: 0px;
   padding: 0px;
 }
 
@@ -34,8 +33,9 @@ body {
   height: 100%;
 }
 
-span {
+div {
   font-family: "MaruBuri-Regular";
+  font-weight: bold;
 }
 
 .click {
@@ -45,7 +45,7 @@ span {
   position: absolute;
   transform: translate(-50%, -50%);
   filter: drop-shadow(2px 2px 2px #b01062);
-  top: 40%;
+  top: 35%;
   left: 50%;
 }
 
@@ -125,7 +125,6 @@ span {
 }
 
 .show {
-  width: 200px;
   opacity: 100%;
   transition: 0.2s;
 }
@@ -179,7 +178,7 @@ span {
 .title-container {
   opacity: 0%;
   width: 100%;
-  top: 40%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -190,11 +189,8 @@ span {
   opacity: 100%;
 }
 
-.title-container.show > b {
+.title-container.show > div {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-family: "국립박물관문화재단클래식B";
   font-size: 45px;
   width: 100%;
@@ -209,8 +205,8 @@ span {
   -webkit-text-fill-color: transparent;
 }
 
-.title-container.show:nth-child(2) {
-  filter: blur(3px) contrast(200%);
+.bottom {
+  filter: blur(5px);
 }
 
 a {
@@ -232,7 +228,7 @@ li {
 
 footer {
   z-index: 1;
-  font-family: "MaruBuri-Regular";
+  font-family: "MaruBuri-Regular";s
   color: #2f3b5d;
   position: absolute;
   top: 145%;
@@ -240,12 +236,23 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   html {
+    height: 200vh;
     width: 100%;
+    overflow: hidden;
   }
+
   body {
-    margin: 0 auto;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .line-container.show {
+    transform: rotate(45deg);
+  }
+  .cloud.show {
+    left: -50%;
   }
   .title-container.show {
     width: 100%;
@@ -254,31 +261,27 @@ footer {
     top: 35%;
   }
 
-  .title {
-    font-size: 20px;
+  .title-container.show > div {
+    font-size: 25px;
   }
 
   .cloud-over.show {
     position: absolute;
-    bottom: 98%;
-    width: 100%;
-    height: 100%;
   }
 
-  .ground-container {
-    width: 100%;
-  }
   .ground {
     z-index: 1;
     bottom: -300%;
-    width: 100%;
-    height: 200%;
   }
   li {
     transform: translate(-50%, -50%);
     bottom: 0;
     left: 50%;
     width: 100%;
+  }
+
+  a {
+    transform: translate(-50%, -50%);
   }
   footer {
     transform: translate(-50%, -50%);
