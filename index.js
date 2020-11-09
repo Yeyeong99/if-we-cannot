@@ -26,7 +26,7 @@ function changeTitle () {
     }
 };
 
-window.addEventListener("resize", changeTitle);
+window.addEventListener("load", changeTitle);
 
 moon.addEventListener("click", function() {
     author.classList.toggle("author");
