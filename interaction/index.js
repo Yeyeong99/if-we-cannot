@@ -19,29 +19,31 @@ function createStars() {
 function changeStarWidth() {
     const stars = document.querySelectorAll("i");
     for (i=0; i<stars.length; i++) {
-        let x = Math.floor(Math.random()*100);
-        stars[i].style.width = x + 'px';
-        stars[i].style.transitionProperty = "width";
-        stars[i].style.transformOrigin = "top left"
-        stars[i].style.transitionDuration ="3s";
-        stars[i].style.transform = "rotate(60deg)";
-        // stars[i].style.transition = "4s";
-    };
+        if (i%3 === 0) {
+            let x = Math.floor(Math.random()*100);
+            stars[i].style.width = x + 'px';
+            stars[i].style.transitionProperty = "width";
+            stars[i].style.transformOrigin = "top left"
+            stars[i].style.transitionDuration ="0.5s";
+            stars[i].style.transform = "rotate(-120deg) translate(50px)";
+        };
+        }
     
 };
 function defaultWidth() {
     const stars = document.querySelectorAll("i");
     for (i=0; i<stars.length; i++) {
         stars[i].style.transitionProperty = "width";
-        stars[i].style.transitionDuration ="10s";
-        let starNum = stars[i].style.width.replace(/[^0-9]/g,'');
-        starNum -=(starNum-1);
-        stars[i].style.width = starNum +"px";
-        console.log(stars[i].style.width)
+        stars[i].style.transitionDuration ="1s";
+        stars[i].style.width=1+"px";
     };
 }
+;
 createStars();
-window.addEventListener("click",changeStarWidth);
-
+window.addEventListener("click", defaultWidth);
+const stars = document.querySelectorAll("i");
+for (i=0; i<stars.length; i++) {
+    stars[i].addEventListener("mouseover", changeStarWidth);
+};
 
 // window.addEventListener("click",defaultWidth);/
