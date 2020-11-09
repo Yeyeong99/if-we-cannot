@@ -130,18 +130,19 @@ div {
 }
 
 .cloud {
+  position: absolute;
   top: 20%;
-  left: -479px;
+  left: -150%;
   transition: all 0.8s;
 }
 
 .cloud.show {
+  opacity: 100;
   position: absolute;
   top: 20%;
   left: 0px;
   width: 479px;
   height: 60px;
-  background-image: url(./img/구름.png);
   transition: all 1s;
 }
 
@@ -236,7 +237,7 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   html {
     height: 200vh;
     width: 100%;
@@ -251,6 +252,7 @@ footer {
   .line-container.show {
     transform: rotate(45deg);
   }
+
   .cloud.show {
     left: -50%;
   }
@@ -287,5 +289,11 @@ footer {
     transform: translate(-50%, -50%);
     left: 50%;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .cloud.show {
+    left: -120%;
   }
 }
