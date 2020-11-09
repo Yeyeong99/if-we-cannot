@@ -9,20 +9,6 @@ clickBtn = document.querySelector(".click");
 
 const array = [moon,cloud,cloudOver,titleContainer,lineContainer]
 
-moon.addEventListener("click", function() {
-    author.classList.toggle("author");
-    author.classList.toggle("show");
-
-});
-
-window.addEventListener("click", function(){
-    clickBtn.classList.add("hide");
-    for (i=0;i<array.length;i++) {
-        array[i].classList.add("show");
-    }
-    clickBtn.classList.remove("click");
-});
-
 function changeTitle () {
     const windowWidth = window.innerWidth,
     title = document.querySelectorAll(".title"),
@@ -41,3 +27,17 @@ function changeTitle () {
 };
 
 window.addEventListener("resize", changeTitle);
+
+moon.addEventListener("click", function() {
+    author.classList.toggle("author");
+    author.classList.toggle("show");
+
+});
+
+window.addEventListener("click", function(){
+    clickBtn.classList.add("hide");
+    clickBtn.classList.remove("click");
+    for (i=0;i<array.length;i++) {
+        array[i].classList.add("show");
+    }
+});
