@@ -238,8 +238,8 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* 
-@media {
+
+@media (max-width: 400px) {
   body {
     height: 170vh;
   }
@@ -270,4 +270,4 @@ footer {
     left: 70%;
     width: 100%;
   }
-} */
+}
