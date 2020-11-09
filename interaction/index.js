@@ -19,9 +19,12 @@ function createStars() {
 function changeStarPosition() {
     const stars = document.querySelectorAll("i");
     for (i=0; i<=stars.length; i++) {
-        stars[i].classList.toggle("change-position");
+        if (i%2 === 0) {
+        let x = Math.floor(Math.random()*window.innerWidth);
+        stars[i].style.width = x*20 + 'px';
+        }
     };
 };
-createStars();
 
+createStars();
 window.addEventListener("click", changeStarPosition);
