@@ -10,32 +10,34 @@ body {
 }
 
 .scene > i {
+  display: block;
   position: absolute;
   background: white;
   border-radius: 50%;
   filter: blur(1px) contrast(200);
 }
 
-.change-width {
-  animation: change-width 1s;
+.change-location {
+  animation: change-location 2s;
 }
 
 #width {
   transition: 2s;
   width: 1px;
 }
-@keyframes change-width {
+@keyframes change-location {
   0% {
+    width: 5%;
     transform-origin: top left;
-    transform: rotate(230deg) translate(0, 0);
+    transform: rotate(-120deg) translateY(10%);
   }
 
-  50% {
-    width: 10px;
+  90% {
+    transform-origin: top left;
+    transform: rotate(-120deg) translateY(0);
   }
   100% {
-    transform-origin: top left;
-    transform: rotate(220deg) translate(-50px, -50px);
+    opacity: 0;
   }
 }
 
