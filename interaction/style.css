@@ -1,0 +1,22 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c2439;
+  overflow: hidden;
+}
+
+.scene > i {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  filter: blur(1px) contrast(200);
+}
+
+.change-position {
+  transform: translateX(10px);
+  transform: translateY(15px);
+}
