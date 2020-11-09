@@ -22,10 +22,10 @@
 }
 
 html {
+  height: 100vh;
   background-image: url(./img/우리가-빛의-속도로-갈-수-없다면_0000s_0006_레이어-24.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 140vh;
 }
 
 body {
@@ -105,17 +105,14 @@ div {
 
 .moon.show {
   z-index: 1;
+  transition: all 0.8s;
   filter: drop-shadow(3px 3px 3px #000);
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: black;
 }
 
 .moon :hover {
   cursor: pointer;
   padding-left: 10px;
   transition: all 0.2s;
-  z-index: 1;
 }
 
 .author {
@@ -133,59 +130,26 @@ div {
   position: absolute;
   top: 20%;
   left: -150%;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 .cloud.show {
-  opacity: 100;
   position: absolute;
   top: 20%;
-  left: 0px;
-  width: 479px;
-  height: 60px;
+  left: 0;
   transition: all 1s;
-}
-
-.ground-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 70%;
-  display: flex;
-  flex-direction: column;
-}
-
-.cloud-over {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-}
-
-.cloud-over.show {
-  position: absolute;
-  bottom: 98%;
-  width: 100%;
-  height: 40%;
-}
-
-.ground {
-  z-index: 1;
-  bottom: -300%;
-  width: 100%;
-  height: 200%;
 }
 
 .title-container {
   opacity: 0%;
   width: 100%;
+  position: fixed;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .title-container.show {
-  position: fixed;
   transition: all 5s;
   opacity: 100%;
 }
@@ -209,12 +173,45 @@ div {
 .bottom {
   filter: blur(5px);
 }
+.ground-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 70%;
+}
 
-a {
-  z-index: 1;
+.cloud-over {
+  position: relative;
+  bottom: 0;
+}
+
+.cloud-over.show {
+  width: 100%;
+  height: 45%;
+  bottom: 40%;
+  transition: all 0.7s;
+}
+
+.ground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  transform: translate(-50%, -50%);
   position: absolute;
   left: 50%;
-  bottom: -10%;
+  bottom: -20%;
+}
+
+a {
   transform: translate(-50%, -50%);
   text-decoration: none;
   font-family: "국립박물관문화재단클래식B";
@@ -223,18 +220,13 @@ a {
   filter: drop-shadow(2px 2px 2px #000);
 }
 
-li {
-  list-style: none;
-}
-
 footer {
-  z-index: 1;
+  position: absolute;
+  left: 50%;
+  bottom: -50%;
+  transform: translate(-50%, -50%);
   font-family: "MaruBuri-Regular";
   color: #2f3b5d;
-  position: absolute;
-  top: 145%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 576px) {
@@ -257,23 +249,8 @@ footer {
   .title-container.show > div {
     font-size: 20px;
   }
-
-  nav {
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    bottom: 5%;
-  }
-
-  footer {
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-  }
 }
+
 @media screen and (max-width: 800px) {
   .line-container.show {
     transform: rotate(45deg);
@@ -289,22 +266,6 @@ footer {
   }
   .title-container.show > div {
     font-size: 30px;
-  }
-
-  nav {
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    bottom: -30%;
-  }
-
-  footer {
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
   }
 }
 

@@ -7,7 +7,7 @@ titleContainer = document.querySelector(".title-container"),
 lineContainer = document.querySelector(".line-container"),
 clickBtn = document.querySelector(".click");
 
-const array = [moon,cloud,cloudOver,titleContainer,lineContainer]
+const array = [cloud,moon,cloudOver,titleContainer,lineContainer]
 
 function changeTitle () {
     const windowWidth = window.innerWidth,
@@ -28,11 +28,6 @@ function changeTitle () {
 
 window.addEventListener("load", changeTitle);
 
-moon.addEventListener("click", function() {
-    author.classList.toggle("author");
-    author.classList.toggle("show");
-
-});
 
 window.addEventListener("click", function(){
     clickBtn.classList.add("hide");
@@ -40,4 +35,9 @@ window.addEventListener("click", function(){
     for (i=0;i<array.length;i++) {
         array[i].classList.add("show");
     }
+});
+moon.addEventListener("click", function() {
+    author.classList.toggle("author");
+    author.classList.toggle("show");
+
 });
