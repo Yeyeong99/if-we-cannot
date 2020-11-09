@@ -18,7 +18,7 @@ body {
 }
 
 .change-location {
-  animation: change-location 2s;
+  animation: change-location;
 }
 
 #width {
@@ -27,14 +27,14 @@ body {
 }
 @keyframes change-location {
   0% {
-    width: 5%;
-    transform-origin: top left;
-    transform: rotate(-120deg) translateY(10%);
+    width: 10%;
+    transform-origin: bottom left;
+    transform: rotate(300deg) translateY(0);
   }
 
   90% {
-    transform-origin: top left;
-    transform: rotate(-120deg) translateY(0);
+    transform-origin: bottom left;
+    transform: rotate(300deg) translateY(10%);
   }
   100% {
     opacity: 0;

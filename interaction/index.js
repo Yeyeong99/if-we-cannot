@@ -30,7 +30,9 @@ window.addEventListener("click", function() {
     const stars = document.querySelectorAll("i");
     for (i=0; i<stars.length; i++) {
         if (i%19 === 0) {
+            let duration = Math.random() * 7;
             stars[i].classList.toggle("change-location");
+            stars[i].style.animationDuration = duration +'s'; 
         };
         
     }
