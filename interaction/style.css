@@ -65,18 +65,23 @@ button {
   cursor: pointer;
 }
 
-button :active {
-  outline: red;
-}
 .hide {
   display: none;
 }
+
 .author-btn {
   top: 100px;
   left: 100px;
   transform: translate(-50%,-50%);
 }
 
+/*책 내용 - 지구*/
+.container {
+  width: 30%;
+  position: absolute;
+  text-align: center;
+  color: aliceblue;
+}
 .lost-btn {
   top: 30px;
   left: 80px;

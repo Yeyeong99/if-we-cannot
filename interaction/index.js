@@ -2,7 +2,16 @@ const earth = document.querySelector(".earth"),
  earthContainer = document.querySelector(".earth-container"),
  author = document.querySelector(".author-container"),
  scene = document.querySelector(".scene"),
- authorBtn = document.querySelector(".author-btn");
+ authorBtn = document.querySelector(".author-btn"),
+ emotionBtn = document.querySelector(".emotion-btn"),
+ symbioBtn = document.querySelector(".symbiosis-btn"),
+ lostBtn = document.querySelector(".lost-btn"),
+ heroBtn = document.querySelector(".hero-btn"),
+ hero = document.querySelector(".hero"),
+ emotion = document.querySelector(".emotion"),
+ lost = document.querySelector(".lost"),
+ symbio = document.querySelector(".symbiosis");
+
  
  function createStars() {
     const scene = document.querySelector(".scene");
@@ -54,4 +63,36 @@ earth.addEventListener("mouseleave", function() {
 
 authorBtn.addEventListener("click", function() {
     author.classList.toggle("show");
+});
+
+heroBtn.addEventListener("click",function() {
+    hero.classList.toggle("hide");
+    emotion.classList.add("hide");
+    symbio.classList.add("hide");
+    lost.classList.add("hide");
+
+});
+
+emotionBtn.addEventListener("click", function() {
+    emotion.classList.toggle("hide");
+    hero.classList.add("hide");
+    symbio.classList.add("hide");
+    lost.classList.add("hide");
+
+});
+
+lostBtn.addEventListener("click", function() {
+    lost.classList.toggle("hide");
+    hero.classList.add("hide");
+    symbio.classList.add("hide");
+    emotion.classList.add("hide");
+
+});
+
+symbioBtn.addEventListener("click", function() {
+    symbio.classList.toggle("hide");
+    hero.classList.add("hide");
+    emotion.classList.add("hide");
+    lost.classList.add("hide");
+
 });
