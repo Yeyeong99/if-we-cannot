@@ -1,4 +1,3 @@
-
 function createStars() {
     const scene = document.querySelector(".scene");
     for (i=0; i<=500; i++) {
@@ -16,24 +15,29 @@ function createStars() {
     }
 };
 
-
-const stars = document.querySelectorAll("i");
-for (i=0; i<stars.length; i++) {
-    if (i%3 === 0) {
-        let x = Math.floor(Math.random()*100);
-        stars[i].style.width = x + 'px';
-    };
-};
-
 createStars();
-window.addEventListener("click", function() {
+
+function shootingStars() {
     const stars = document.querySelectorAll("i");
     for (i=0; i<stars.length; i++) {
         if (i%19 === 0) {
-            let duration = Math.random() * 7;
+            let duration = Math.random() * 2;
             stars[i].classList.toggle("change-location");
             stars[i].style.animationDuration = duration +'s'; 
         };
         
-    }
+    };
+};
+
+
+window.addEventListener("click", shootingStars);
+
+const earth = document.querySelector(".earth");
+
+earth.addEventListener("mouseover", function() {
+    earth.classList.remove("rotation");
+});
+
+earth.addEventListener("mouseleave", function() {
+    earth.classList.add("rotation");
 });
