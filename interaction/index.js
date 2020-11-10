@@ -1,3 +1,7 @@
+const earth = document.querySelector(".earth"),
+ earthContainer = document.querySelector(".earth-container"),
+ author = document.querySelector(".author-container"),
+ scene = document.querySelector(".scene");
 function createStars() {
     const scene = document.querySelector(".scene");
     for (i=0; i<=500; i++) {
@@ -32,12 +36,16 @@ function shootingStars() {
 
 window.addEventListener("click", shootingStars);
 
-const earth = document.querySelector(".earth");
-
 earth.addEventListener("mouseover", function() {
-    earth.classList.remove("rotation");
+    earth.style.transform = "scale(1.5)";
+    author.style.bottom = "20%";
 });
 
 earth.addEventListener("mouseleave", function() {
-    earth.classList.add("rotation");
+    author.style.bottom = "";
+    earth.style.transform="";
 });
+
+earth.addEventListener("click", function() {
+    author.classList.toggle("show");
+})

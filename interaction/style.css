@@ -1,7 +1,17 @@
+@font-face {
+  font-family: "MaruBuri-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
+  font-family: "MaruBuri-Regular";
+  
 }
 
 body {
@@ -30,16 +40,38 @@ body {
 
 .earth {
   z-index: 1;
+  position: absolute;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   box-shadow: inset 0 0 10px rgba(0,0,0,0.85);
-  background-color: darkblue;
   background-size: cover;
+  background-color: darkblue;
   background-image: url(/img/세계지도.png);
 }
+
+
 .rotation {
   animation: earth-rotation 15s linear infinite;
+}
+
+.author-container {
+  display: none;
+  z-index: 1;
+  position: relative;
+  bottom: 15%;
+  width: 20%;
+  color: aliceblue;
+}
+.show {
+  display: flex;
+  justify-content: center;
+}
+.author-container>span {
+  position: fixed;
+}
+.bottom {
+  filter: blur(3px);
 }
 
 @keyframes change-location {
