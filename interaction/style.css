@@ -21,10 +21,26 @@ body {
   animation: change-location;
 }
 
-#width {
-  transition: 2s;
-  width: 1px;
+.earth-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.earth {
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: darkblue;
+  background-size: cover;
+  background-image: url(/img/세계지도.png);
+  animation: earth-flow 15s linear infinite;
+  animation-direction: initial;
+}
+
 @keyframes change-location {
   0% {
     width: 10%;
@@ -41,11 +57,11 @@ body {
   }
 }
 
-/* @keyframes change-location {
+@keyframes earth-flow {
   0% {
-    transform: ;
+    background-position: 0%;
   }
   100% {
-    transform: ;
+    background-position: 195%;
   }
-} */
+}
