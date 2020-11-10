@@ -15,11 +15,18 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   background-color: #1c2439;
-  overflow: hidden;
+
+
 }
 
 .scene > i {
+  width: 100%;
+  height: 100%;
   position: absolute;
   background: white;
   border-radius: 50%;
@@ -50,6 +57,43 @@ body {
   background-image: url(/img/세계지도.png);
 }
 
+button {
+  padding: 10px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.85);
+  cursor: pointer;
+}
+
+button :active {
+  outline: red;
+}
+.hide {
+  display: none;
+}
+.author-btn {
+  top: 100px;
+  left: 100px;
+  transform: translate(-50%,-50%);
+}
+
+.lost-btn {
+  top: 30px;
+  left: 80px;
+}
+
+.hero-btn {
+  top: 100px;
+  left: 80px;
+}
+.emotion-btn {
+  top: 140px;
+  left: 5px;
+}
+.symbiosis-btn {
+  top: 50px;
+  right: 90px;
+}
 
 .rotation {
   animation: earth-rotation 15s linear infinite;
@@ -63,6 +107,7 @@ body {
   width: 20%;
   color: aliceblue;
 }
+
 .show {
   display: flex;
   justify-content: center;
