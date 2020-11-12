@@ -12,8 +12,8 @@ const earth = document.querySelector(".earth"),
  lost = document.querySelector(".lost"),
  symbio = document.querySelector(".symbiosis");
 
- 
- function createStars() {
+//star animation
+function createStars() {
     const scene = document.querySelector(".scene");
     for (i=0; i<=500; i++) {
         const star = document.createElement("i");
@@ -25,16 +25,11 @@ const earth = document.querySelector(".earth"),
         star.style.top = y + 'px';
         star.style.width = 1 + size + 'px';
         star.style.height = 1 + size + 'px'; 
-        
         scene.appendChild(star);
     }
 };
 
-createStars();
-window.addEventListener("resize", function (){
-    document.removeChild("i");
-    createStars});
-function shootingStars() {
+function shiningStars() { //css width 없애기 - 그냥 반짝 거리게 - mobile에서
     const stars = document.querySelectorAll("i");
     for (i=0; i<stars.length; i++) {
         let random = Math.floor(Math.random()*100)
@@ -47,9 +42,28 @@ function shootingStars() {
     };
 };
 
+function shootingStars() {
+    const stars = document.querySelectorAll("i");
+    for (i=0; i<stars.length; i++) {
+        let random = Math.floor(Math.random()*100)
+        if (i%random === 0) {
+            let duration = Math.random() * 3;
+            // stars[i].style.width = Math.random()*200 + "px";
+            stars[i].classList.toggle("change-location");
+            stars[i].style.animationDuration = duration +'s'; 
+        };
+    };
+};
 
+createStars();
 window.addEventListener("click", shootingStars);
+window.addEventListener("resize", function (){
+    document.removeChild("i");
+    createStars}
+    );
 
+
+//earth animation
 earth.addEventListener("mouseover", function() {
     earth.style.transform = "scale(1.2)";
     author.style.bottom = "17%";
