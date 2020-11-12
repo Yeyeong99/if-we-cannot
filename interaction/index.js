@@ -31,11 +31,14 @@ const earth = document.querySelector(".earth"),
 };
 
 createStars();
-
+window.addEventListener("resize", function (){
+    document.removeChild("i");
+    createStars});
 function shootingStars() {
     const stars = document.querySelectorAll("i");
     for (i=0; i<stars.length; i++) {
-        if (i%19 === 0) {
+        let random = Math.floor(Math.random()*100)
+        if (i%random === 0) {
             let duration = Math.random() * 2;
             stars[i].classList.toggle("change-location");
             stars[i].style.animationDuration = duration +'s'; 
