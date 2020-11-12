@@ -76,6 +76,10 @@ earth.addEventListener("mouseover", function() {
 earth.addEventListener("mouseleave", function() {
     author.style.bottom = "";
     earth.style.transform="";
+    const buttons = document.querySelectorAll("button");
+    for (i=0; i<buttons.length; i++) {
+        buttons[i].classList.add("hide");
+    }; 
 });
 
 authorBtn.addEventListener("click", function() {
