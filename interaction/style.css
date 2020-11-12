@@ -11,7 +11,7 @@
 ::after {
   box-sizing: border-box;
   font-family: "MaruBuri-Regular";
-  
+  color: aliceblue;
 }
 
 body {
@@ -35,8 +35,11 @@ body {
   animation: change-location;
 }
 
+.exo { 
+  flex: 1;
+}
 .earth-container {
-  width: 100%;
+  flex: 1;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -44,7 +47,6 @@ body {
 }
 
 .earth {
-  z-index: 1;
   position: absolute;
   width: 200px;
   height: 200px;
@@ -74,12 +76,17 @@ button {
 }
 
 /*책 내용 - 지구*/
+.chapters {
+  display: flex;
+  align-items: center;
+}
 .container {
   width: 30%;
   position: absolute;
   text-align: center;
   color: aliceblue;
 }
+
 .lost-btn {
   top: 30px;
   left: 80px;
@@ -122,6 +129,9 @@ button {
   filter: blur(3px);
 }
 
+.lily {
+  flex: 1;
+}
 @keyframes change-location {
   0% {
     transform-origin: bottom left;
