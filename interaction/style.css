@@ -169,4 +169,16 @@ button {
     flex-direction: column;
     justify-content: space-between;
   }
+  .earth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .chapters {
+    width: 100%;
+  }
+  .container {
+    margin: 0;
+    width: 100%;
+  }
 }
