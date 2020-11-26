@@ -88,9 +88,19 @@ button {
   color: aliceblue;
 }
 
+.lost {
+  display: flex;
+  align-items: center;
+}
 .lost-btn {
   top: 30px;
   left: 80px;
+}
+
+.lost > img {
+  width: 50%;
+  height: 50%;
+  animation: change-opacity 10s infinite;
 }
 
 .hero-btn {
@@ -159,6 +169,14 @@ button {
   }
 }
 
+@keyframes change-opacity {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 576px) {
   html {
     height: 100%;
